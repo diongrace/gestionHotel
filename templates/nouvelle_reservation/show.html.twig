@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NouvelleReservation{% endblock %}
+
+{% block body %}
+    <h1>NouvelleReservation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ nouvelle_reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ nouvelle_reservation.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenoms</th>
+                <td>{{ nouvelle_reservation.prenoms }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ nouvelle_reservation.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ nouvelle_reservation.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ nouvelle_reservation.adress }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ nouvelle_reservation.ville }}</td>
+            </tr>
+            <tr>
+                <th>Arrive</th>
+                <td>{{ nouvelle_reservation.arrive }}</td>
+            </tr>
+            <tr>
+                <th>Depart</th>
+                <td>{{ nouvelle_reservation.depart }}</td>
+            </tr>
+            <tr>
+                <th>Paye</th>
+                <td>{{ nouvelle_reservation.paye }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nouvelle_reservation_index') }}">back to list</a>
+
+    <a href="{{ path('app_nouvelle_reservation_edit', {'id': nouvelle_reservation.id}) }}">edit</a>
+
+    {{ include('nouvelle_reservation/_delete_form.html.twig') }}
+{% endblock %}

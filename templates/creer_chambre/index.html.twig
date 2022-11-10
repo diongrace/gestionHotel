@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CreerChambre index{% endblock %}
+
+{% block body %}
+    <h1>CreerChambre index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Numero</th>
+                <th>Type</th>
+                <th>Capicite</th>
+                <th>TypeLit</th>
+                <th>Statut</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for creer_chambre in creer_chambres %}
+            <tr>
+                <td>{{ creer_chambre.id }}</td>
+                <td>{{ creer_chambre.nom }}</td>
+                <td>{{ creer_chambre.numero }}</td>
+                <td>{{ creer_chambre.type }}</td>
+                <td>{{ creer_chambre.capicite }}</td>
+                <td>{{ creer_chambre.typeLit }}</td>
+                <td>{{ creer_chambre.statut }}</td>
+                <td>
+                    <a href="{{ path('app_creer_chambre_show', {'id': creer_chambre.id}) }}">show</a>
+                    <a href="{{ path('app_creer_chambre_edit', {'id': creer_chambre.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_creer_chambre_new') }}">Create new</a>
+{% endblock %}

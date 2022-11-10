@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New CreerTypeChambre{% endblock %}
+
+{% block body %}
+    <h1>Create new CreerTypeChambre</h1>
+
+    {{ include('creer_type_chambre/_form.html.twig') }}
+
+    <a href="{{ path('app_creer_type_chambre_index') }}">back to list</a>
+{% endblock %}

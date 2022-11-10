@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CreerChambre{% endblock %}
+
+{% block body %}
+    <h1>CreerChambre</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ creer_chambre.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ creer_chambre.nom }}</td>
+            </tr>
+            <tr>
+                <th>Numero</th>
+                <td>{{ creer_chambre.numero }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ creer_chambre.type }}</td>
+            </tr>
+            <tr>
+                <th>Capicite</th>
+                <td>{{ creer_chambre.capicite }}</td>
+            </tr>
+            <tr>
+                <th>TypeLit</th>
+                <td>{{ creer_chambre.typeLit }}</td>
+            </tr>
+            <tr>
+                <th>Statut</th>
+                <td>{{ creer_chambre.statut }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_creer_chambre_index') }}">back to list</a>
+
+    <a href="{{ path('app_creer_chambre_edit', {'id': creer_chambre.id}) }}">edit</a>
+
+    {{ include('creer_chambre/_delete_form.html.twig') }}
+{% endblock %}

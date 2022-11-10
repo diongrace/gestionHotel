@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NouvelleReservation index{% endblock %}
+
+{% block body %}
+    <h1>NouvelleReservation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenoms</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Adress</th>
+                <th>Ville</th>
+                <th>Arrive</th>
+                <th>Depart</th>
+                <th>Paye</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nouvelle_reservation in nouvelle_reservations %}
+            <tr>
+                <td>{{ nouvelle_reservation.id }}</td>
+                <td>{{ nouvelle_reservation.nom }}</td>
+                <td>{{ nouvelle_reservation.prenoms }}</td>
+                <td>{{ nouvelle_reservation.email }}</td>
+                <td>{{ nouvelle_reservation.telephone }}</td>
+                <td>{{ nouvelle_reservation.adress }}</td>
+                <td>{{ nouvelle_reservation.ville }}</td>
+                <td>{{ nouvelle_reservation.arrive }}</td>
+                <td>{{ nouvelle_reservation.depart }}</td>
+                <td>{{ nouvelle_reservation.paye }}</td>
+                <td>
+                    <a href="{{ path('app_nouvelle_reservation_show', {'id': nouvelle_reservation.id}) }}">show</a>
+                    <a href="{{ path('app_nouvelle_reservation_edit', {'id': nouvelle_reservation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nouvelle_reservation_new') }}">Create new</a>
+{% endblock %}
