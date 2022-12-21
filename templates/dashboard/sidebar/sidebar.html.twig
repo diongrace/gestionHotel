@@ -30,7 +30,7 @@
       </div> #}
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-b">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -43,38 +43,42 @@
               </p>
             </a>
             <br> #}
-          <div class="dropdown">
-            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Personnels
-           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/utilisateurs">Creer Utilisateur</a>
-            <a class="dropdown-item" href="">Liste des utilisateurs</a>
-            <a class="dropdown-item" href="/users">Comptes</a>
-          </div>
-       </div>
-       <br>
-          <div class="dropdown">
-            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Chambres
-           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/type/chambre">creer type de chambres</a>
-            <a class="dropdown-item" href="/creer/type/chambre">liste des types de chambres</a>
-            <a class="dropdown-item" href="/creer/chambre">creer chambre</a>
-            <a class="dropdown-item" href="#">liste de chambres</a>
-          </div>
-       </div>
-       <br>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Reservations
-           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/nouvelle/reservation">Nouvelle Reservations</a>
-            <a class="dropdown-item" href="#">Les Reservations</a>
-          </div>
-       </div>
+          
+          <li class="nav-item">
+            <a href="/utilisateurs" class="nav-link">
+              <p>
+                Utilisateurs
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/nouvelle/reservation" class="nav-link">
+              <p>
+                Reservation
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/creer/chambre" class="nav-link">
+              <p>
+                creer chambre
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/users" class="nav-link">
+              <p>
+               Compte
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/type/chambre" class="nav-link">
+              <p>
+                type chambre
+              </p>
+            </a>
+          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

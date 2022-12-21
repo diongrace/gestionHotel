@@ -1,0 +1,31 @@
+<td class="text-end">
+    <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+        <i class="bi bi-gear fs-2x "></i>
+        <!--end::Svg Icon-->
+    </a>
+    <!--begin::Menu-->
+    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+        <!--begin::Menu item edit-->
+        <div class="menu-item px-3">
+            <a href="{{ path('app_utilisateurs_edit', {'id': utilisateur.id}) }}" class="menu-link px-10">
+                <i class="bi bi-check2-square fs-2x text-info"></i>
+            </a>
+        </div>
+        <!--end::Menu item-->
+        <!--begin::Menu item view-->
+        <div class="menu-item px-3">
+            <a href="{{ path('app_utilisateurs_show', {'id': utilisateur.id}) }}" class="menu-link px-10">
+                <i class="bi bi-person-lines-fill fs-2x text-warning"></i>
+            </a>
+        </div>
+        <!--begin::Menu item Delete-->
+        <div class="menu-item px-3">
+            <a href="{{ path('app_utilisateurs_delete', {'id': utilisateur.id}) }}" class="menu-link px-10">
+                <i class="bi bi-trash fs-2x text-danger"></i>
+            </a>
+        </div>
+        <!--end::Menu item-->
+    </div>
+    <!--end::Menu-->
+</td>
